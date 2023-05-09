@@ -17,25 +17,46 @@ const items = [
         children:[
             {
                 key:"1-1",
-                label: <NavLink to="/">React Redux</NavLink>,
+                label: <NavLink to="/db">看板页面</NavLink>,
                 icon: React.createElement(VideoCameraOutlined),
             },
+           
             {
                 key:"1-2",
-                label: <NavLink to="/403">403</NavLink>,
+                label: <NavLink to="/fs">尾盘竞价查询</NavLink>,
                 icon: React.createElement(VideoCameraOutlined),
             },
             {
                 key:"1-3",
-                label: <NavLink to="/404">404</NavLink>,
+                label: <NavLink to="/fm">文件管理</NavLink>,
                 icon: React.createElement(VideoCameraOutlined),
             },
             {
                 key:"1-4",
-                label: <NavLink to="/havePermissions">权限查看</NavLink>,
+                label: <NavLink to="/td">当日涨幅</NavLink>,
                 icon: React.createElement(VideoCameraOutlined),
-            }
+            },
+
         ]
+    },{
+        key:"2",
+        label: '配置',
+        icon: React.createElement(UserOutlined),
+        children:[{
+            key:"2-1",
+            label: <NavLink to="/404">404</NavLink>,
+            icon: React.createElement(VideoCameraOutlined),
+        },
+        {
+            key:"2-2",
+            label: <NavLink to="/403">403</NavLink>,
+            icon: React.createElement(VideoCameraOutlined),
+        },
+        {
+            key:"2-3",
+            label: <NavLink to="/havePermissions">权限查看</NavLink>,
+            icon: React.createElement(VideoCameraOutlined),
+        }]
     }
 ]
 

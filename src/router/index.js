@@ -9,6 +9,10 @@ const NoAuthorized = lazy(() => import(/* webpackChunkName: "403" */'../views/No
 const Login = lazy(() => import(/* webpackChunkName: "login" */'../views/Login'))
 const Home = lazy(() => import(/* webpackChunkName: "home" */'../views/home/Home'))
 const HavePermissions = lazy(() => import(/* webpackChunkName: "HavePermissions" */'../views/HavePermissions/HavePermissions'))
+const TodayData = lazy(() => import(/* webpackChunkName: "TodayData" */'../views/TodayData/TodayData'))
+const FileManage = lazy(() => import(/* webpackChunkName: "FileManage" */'../views/FileManage/FileManage'))
+const Dashboard = lazy(() => import(/* webpackChunkName: "Dashboard" */'../views/Dashboard/Dashboard'))
+const FileSearch = lazy(() => import(/* webpackChunkName: "FileSearch" */'../views/FileSearch/FileSearch'))
 
 
 //需要鉴权的路由表
@@ -59,6 +63,7 @@ export default function Router() {
     ]);
     const dynamicRouter = useRoutes([
         {path: '/login', element: <Login/>},
+       
         {path: '*', element: <NoFound/>},
         {
             path: "/",
@@ -68,6 +73,10 @@ export default function Router() {
                     index: true,
                     element: <Home/>,
                 },
+                {path: '/td', element: <TodayData/>},
+                {path: '/fm', element: <FileManage/>},
+                {path: '/db', element: <Dashboard/>},
+                {path: '/fs', element: <FileSearch/>},
                 ...dynamicRoutes
             ],
         },
